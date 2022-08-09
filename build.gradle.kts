@@ -24,11 +24,12 @@ compileTestKotlin.kotlinOptions {
 
 abstract class SetupTask : DefaultTask() {
 
-    var isIgnored: Boolean = false
+    var isIgnored: Boolean = true
     var multiSetup: Boolean = false
     @Option(option = "multiModuled", description = "")
     fun setMulti(multiModuled: String) {
         multiSetup = multiModuled.toBoolean()
+        isIgnored = false
     }
 }
 
