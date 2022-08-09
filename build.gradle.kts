@@ -24,7 +24,6 @@ compileTestKotlin.kotlinOptions {
 
 abstract class SetupTask : DefaultTask() {
 
-    //TODO("명칭 수정")
     var isIgnored: Boolean = false
     var multiSetup: Boolean = false
     @Option(option = "multiModuled", description = "")
