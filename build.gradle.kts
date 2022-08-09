@@ -26,9 +26,9 @@ abstract class SetupTask : DefaultTask() {
 
     var isIgnored: Boolean = true
     var multiSetup: Boolean = false
-    @Option(option = "multiModuled", description = "")
-    fun setMulti(multiModuled: String) {
-        multiSetup = multiModuled.toBoolean()
+    @Option(option = "multiModule", description = "")
+    fun setMulti(multiModule: String) {
+        multiSetup = multiModule.toBoolean()
         isIgnored = false
     }
 }
