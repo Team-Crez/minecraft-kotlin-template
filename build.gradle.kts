@@ -23,20 +23,19 @@ compileTestKotlin.kotlinOptions {
 }
 
 abstract class SetupTask : DefaultTask() {
+    private var isIgnored: Boolean = true
+    private var multiModule: Boolean = false
 
-    var isIgnored: Boolean = true
-    var multiSetup: Boolean = false
     @Option(option = "multiModule", description = "")
     fun setMulti(multiModule: String) {
-        multiSetup = multiModule.toBoolean()
+        this.multiModule = multiModule.toBoolean()
         isIgnored = false
     }
-}
 
-tasks {
-    register<SetupTask>("setupWorkspace") {
+    @TaskAction
+    fun process() {
         if (!this.isIgnored) {
-            if (this.multiSetup) {
+            if (this.multiModule) {
                 File("./src").deleteRecursively()
             } else {
                 File("./backend").deleteRecursively()
@@ -45,4 +44,8 @@ tasks {
             }
         }
     }
+}
+
+tasks {
+    register<SetupTask>("setupWorkspace")
 }
