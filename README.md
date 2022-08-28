@@ -1,1 +1,1 @@
-# gradle-kotlin-template
+# minecraft-kotlin-template
