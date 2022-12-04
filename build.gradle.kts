@@ -8,8 +8,9 @@ plugins {
 
 dependencies {
     implementation(kotlin("stdlib"))
-    compileOnly("io.papermc.paper:paper-api:1.19-R0.1-SNAPSHOT")
-    paperDevBundle("1.19.2-R0.1-SNAPSHOT")
+    compileOnly("io.papermc.paper:paper-api:${Dependency.PaperAPI.Version}")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:${Dependency.Coroutine.Version}")
+    paperDevBundle(Dependency.PaperAPI.Version)
 }
 
 repositories {
