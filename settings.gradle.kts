@@ -1,5 +1,3 @@
-include("frontend", "backend")
-
 pluginManagement {
     repositories {
         gradlePluginPortal()
@@ -7,4 +5,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = "minecraft-kotlin-template"
+rootProject.name = "sample"
