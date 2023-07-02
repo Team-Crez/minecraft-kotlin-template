@@ -1,4 +1,4 @@
-package io.github.teamcrez.sample
+package io.github.teamcrez.sample.plugin
 
 import org.bukkit.plugin.java.JavaPlugin
 
